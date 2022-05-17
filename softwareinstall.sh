@@ -29,6 +29,28 @@ sudo usermod -a -G fuse rstrom
 sudo apt install sshfs -y
 
 sudo apt install krusader -y
+sudo apt install kdiff3 -y
+sudo apt install krename -y
+sudo apt install kompare -y
+sudo apt install xxdiff -y
+sudo apt install krename -y
+
+## Install Dolphin
+sudo apt install dolphin -y
+
+## Install Spectacle screenshot utility
+sudo apt install kde-spectacle -y
+
+## Install Flameshot
+sudo apt install flameshot -y
+
+## Updog web server
+## https://github.com/sc0tfree/updog
+pip3 install updog
+
+# Install Remmina
+sudo apt install remmina -y
+
 
 
 
