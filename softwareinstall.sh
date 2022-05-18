@@ -32,6 +32,34 @@ sudo usermod -a -G fuse rstrom
 # Install sshfs
 sudo apt install sshfs -y
 
+# Create directory for sshfs mount for QNAP NAS
+mkdir -p ~/QNAPMyDocs
+
+export qnap='192.168.0.99'
+
+sshfs rstrom@$qnap: ~/QNAPMyDocs
+
+pushd '/home/rstrom/QNAPMyDocs/My Documents/IRTools/Nmap/v7.92/'
+
+cp ncat_7.92-2_amd64.deb ~/Downloads/
+cp nmap_7.92-2_amd64.deb ~/Downloads/
+cp nping_0.7.92-2_amd64.deb ~/Downloads/
+cp zenmap_7.92-2_all.deb ~/Downloads/
+
+popd
+
+# Install Nmap
+# Get this from the QNAP NAS
+
+sudo dpkg -i ~/Downloads/ncat_7.92-2_amd64.deb
+sudo dpkg -i ~/Downloads/nmap_7.92-2_amd64.deb
+sudo dpkg -i ~/Downloads/nping_0.7.92-2_amd64.deb
+sudo dpkg -i ~/Downloads/zenmap_7.92-2_all.deb
+
+
+# Create a directory for mounting remote SMB shares
+mkdir ~/SMBmount
+
 sudo apt install krusader -y
 sudo apt install kdiff3 -y
 sudo apt install krename -y
@@ -147,8 +175,6 @@ suo apt install pandoc -y
 # Simple animated GIF screen recorder with GUI
 sudo apt install peek -y
 
-# Install Nmap
-# Get this from the QNAP NAS
 
 
 wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
