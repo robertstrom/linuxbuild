@@ -134,8 +134,6 @@ sudo apt install gparted -y
 #Install KeePassXC
 sudo apt install keepassxc -y
 
-# Install htop
-sudo apt install htop -y
 
 wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
