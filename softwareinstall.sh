@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Command to execute this script from a terminal
+# wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
+
 # create ~/AppImages directory
 mkdir ~/AppImages
 
