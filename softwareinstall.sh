@@ -286,9 +286,8 @@ sudo apt update
 sleep 1
 sudo apt install software-properties-common wget curl
 sleep 1
-wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-sleep 1
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
 sleep 1
 sudo apt update
 sudo apt install --install-recommends winehq-stable
