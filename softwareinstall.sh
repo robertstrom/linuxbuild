@@ -108,49 +108,77 @@ sudo apt install kompare -y
 sudo apt install xxdiff -y
 sudo apt install krename -y
 
+sleep 1
+
 ## Install Dolphin
 sudo apt install dolphin -y
+
+sleep 1
 
 ## Install Spectacle screenshot utility
 sudo apt install kde-spectacle -y
 
+sleep 1
+
 ## Install Flameshot
 sudo apt install flameshot -y
+
+sleep 1
 
 ## Updog web server
 ## https://github.com/sc0tfree/updog
 pip3 install updog
 
+sleep 1
+
 # Install Remmina
 sudo apt install remmina -y
+
+sleep 1
 
 # Install Discord
 sudo apt install discord -y
 
+sleep 1
+
 # Install Slack
 sudo apt install slack -y
+
+sleep 1
 
 # Install VLC
 sudo apt install vlc -y
 
+sleep 1
+
 # Install VIM
 sudo apt install vim -y
 
+sleep 1
+
 # Install Rhythmbox
 sudo apt install rhythmbox -y
+
+sleep 1
 
 # Install OBS
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install ffmpeg obs-studio
 
+sleep 1
+
 # Install 7zip
 sudo add-apt-repository universe
 sudo apt update
 sudo apt install p7zip-full p7zip-rar -y
 
+sleep 1
+
 # Install htop
 sudo apt install htop -y
+
+sleep 1
 
 # Install Joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
@@ -248,6 +276,8 @@ sleep 1
 
 # Install neofetch
 sudo apt install neofetch -y
+
+sleep 1
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
