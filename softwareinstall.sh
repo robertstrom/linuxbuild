@@ -94,6 +94,48 @@ chmod +x ~/AppImages/ObsidianAppImage
 # Download the .desktop file
 wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desktop -O ~/.local/share/applications/obsidian.desktop
 
+# Install uGet
+sudo apt install uget -y
+
+# Install shutter
+sudo add-apt-repository -y ppa:shutter/ppa
+sudo apt update
+sudo apt install shutter -y
+
+# Install Brave Browser
+sudo apt install apt-transport-https curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser -y
+
+# Install Typora
+# https://support.typora.io/Typora-on-Linux/
+# or use
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+# add Typora's repository
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+# install typora
+sudo apt-get install typora -y
+
+# Install 7zip
+sudo add-apt-repository universe
+sudo apt update
+sudo apt install p7zip-full p7zip-rar -y
+
+# Install Calibre
+sudo apt install calibre -y
+
+# Install gparted
+sudo apt install gparted -y
+
+#Install KeePassXC
+sudo apt install keepassxc -y
+
+# Install htop
+sudo apt install htop -y
 
 wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
