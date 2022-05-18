@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/home/rstrom/AppImages/ObsidianAppImage %u
+Terminal=false
+Type=Application
+Icon=/home/rstrom/AppImages/obsidian.png
+StartupWMClass=obsidian
+X-AppImage-Version=
+Comment=Obsidian
+Categories=Office;
+MimeType=text/html;x-scheme-handler/obsidian;
