@@ -1,9 +1,13 @@
 #!/bin/sh
 
+# create ~/AppImages directory
+mkdir ~/AppImages
+
 sudo apt install copyq -y
 
 sudo apt install csvkit -y
 
+# Install Visual Studio Code
 sudo apt update
 sudo apt install curl gpg gnupg2 software-properties-common apt-transport-https 
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -51,6 +55,41 @@ pip3 install updog
 # Install Remmina
 sudo apt install remmina -y
 
+# Install Discord
+sudo apt install discord -y
+
+# Install Slack
+sudo apt install slack -y
+
+# Install VLC
+sudo apt install vlc -y
+
+# Install VIM
+sudo apt install vim -y
+
+# Install Rhythmbox
+sudo apt install rhythmbox -y
+
+# Install OBS
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install ffmpeg obs-studio
+
+# Install htop
+sudo apt install htop -y
+
+# Install Joplin
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
+
+# Install Obsidian
+# Download the latest AppImage
+curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | grep -i appimage | grep -v arm \
+| grep browser_download \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi - -O ~/AppImages/ObsidianAppImage
+chmod +x ~/AppImages/ObsidianAppImage
+# Download the .desktop file
 
 
 
