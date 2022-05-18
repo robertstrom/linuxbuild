@@ -12,6 +12,8 @@ sudo apt install csvkit -y
 
 sudo apt install exa -y
 
+sudo apt install squashfuse -y
+
 # sudo apt install google-chrome-stable -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
