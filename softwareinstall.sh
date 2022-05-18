@@ -175,6 +175,8 @@ suo apt install pandoc -y
 # Simple animated GIF screen recorder with GUI
 sudo apt install peek -y
 
+# Install neofetch
+sudo apt install neofetch -y
 
 
 wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
