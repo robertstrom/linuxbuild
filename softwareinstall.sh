@@ -134,6 +134,22 @@ sudo apt install gparted -y
 #Install KeePassXC
 sudo apt install keepassxc -y
 
+# Install screen
+sudo apt install screen -y
+
+# Install pdftk
+sudo apt install pdftk -y
+
+# Install pandoc
+suo apt install pandoc -y
+
+# Install peek
+# Simple animated GIF screen recorder with GUI
+sudo apt install peek -y
+
+# Install Nmap
+# Get this from the QNAP NAS
+
 
 wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
