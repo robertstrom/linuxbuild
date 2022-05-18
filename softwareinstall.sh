@@ -83,6 +83,8 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_insta
 
 # Install Obsidian
 # Download the latest AppImage
+# One Liner to Download the Latest Release from Github Repo.md
+# https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | grep -i appimage | grep -v arm \
 | grep browser_download \
 | cut -d : -f 2,3 \
