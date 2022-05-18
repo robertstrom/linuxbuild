@@ -290,5 +290,6 @@ wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_del
  git clone https://github.com/MohamedElashri/exa-zsh
  cd -
 
-## wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
+mv ~/.zshrc ~/.zsh_profile.sav
+wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
