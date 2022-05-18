@@ -178,6 +178,8 @@ sudo apt install peek -y
 # Install neofetch
 sudo apt install neofetch -y
 
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
