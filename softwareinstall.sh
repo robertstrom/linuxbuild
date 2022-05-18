@@ -115,6 +115,11 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install ffmpeg obs-studio
 
+# Install 7zip
+sudo add-apt-repository universe
+sudo apt update
+sudo apt install p7zip-full p7zip-rar -y
+
 # Install htop
 sudo apt install htop -y
 
@@ -132,8 +137,13 @@ curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/lates
 | wget -qi - -O ~/AppImages/ObsidianAppImage
 chmod +x ~/AppImages/ObsidianAppImage
 # Download the .desktop file
-wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desktop -O ~/.local/share/applications/obsidian.desktop
+# wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desktop -O ~/.local/share/applications/obsidian.desktop
 ## ~/AppImages/ObsidianAppImage --appimage-mount
+# usr/share/icons/hicolor/512x512/apps/obsidian.png
+obsidianpng=$(~/AppImages/ObsidianAppImage --appimage-offset)
+sudo mount ~/AppImages/ObsidianAppImage  -o offset=188392 /mnt
+cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/AppImages/
+sudo umount /mnt
 
 
 # Install uGet
@@ -162,10 +172,6 @@ sudo apt-get update
 # install typora
 sudo apt-get install typora -y
 
-# Install 7zip
-sudo add-apt-repository universe
-sudo apt update
-sudo apt install p7zip-full p7zip-rar -y
 
 # Install Calibre
 sudo apt install calibre -y
