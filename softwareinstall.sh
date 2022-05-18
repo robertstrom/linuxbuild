@@ -281,7 +281,7 @@ sleep 1
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-cp ~/.zshrc ~/.zshrc.sav
+mv ~/.zshrc ~/.zsh_profile.sav
 # Download custom .zshrc file from personal GitHub
 wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_dell_xps_15 -O ~/.zshrc
 
@@ -290,6 +290,6 @@ wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_del
  git clone https://github.com/MohamedElashri/exa-zsh
  cd -
 
-mv ~/.zshrc ~/.zsh_profile.sav
+
 wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
