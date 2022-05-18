@@ -189,6 +189,7 @@ wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_del
 # Install exa-zsh plugin
  cd ~/.oh-my-zsh/custom/plugins
  git clone https://github.com/MohamedElashri/exa-zsh
+ cd -
 
 ## wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
