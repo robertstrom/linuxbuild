@@ -12,6 +12,8 @@ sudo apt install csvkit -y
 
 sudo apt install exa -y
 
+# sudo apt install google-chrome-stable -y
+
 # Install Visual Studio Code
 sudo apt update
 sudo apt install curl gpg gnupg2 software-properties-common apt-transport-https 
