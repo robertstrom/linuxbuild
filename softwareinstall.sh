@@ -121,6 +121,8 @@ curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/lates
 chmod +x ~/AppImages/ObsidianAppImage
 # Download the .desktop file
 wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desktop -O ~/.local/share/applications/obsidian.desktop
+## ~/AppImages/ObsidianAppImage --appimage-mount
+
 
 # Install uGet
 sudo apt install uget -y
