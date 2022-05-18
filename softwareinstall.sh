@@ -283,7 +283,7 @@ sleep 1
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp ~/.zshrc ~/.zshrc.sav
 # Download custom .zshrc file from personal GitHub
-wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_dell_xps_15 -O ~/.zshrc
+wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_dell_xps_15-O ~/.zshrc
 
 # Install exa-zsh plugin
  cd ~/.oh-my-zsh/custom/plugins
