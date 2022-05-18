@@ -169,7 +169,7 @@ sudo apt install screen -y
 sudo apt install pdftk -y
 
 # Install pandoc
-suo apt install pandoc -y
+sudo apt install pandoc -y
 
 # Install peek
 # Simple animated GIF screen recorder with GUI
@@ -180,6 +180,8 @@ sudo apt install neofetch -y
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp ~/.zshrc ~/.zshrc.sav
+wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_dell_xps_15 -O ~/.zshrc
 
-wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
+## wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
