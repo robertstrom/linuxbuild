@@ -279,6 +279,22 @@ sudo apt install neofetch -y
 
 sleep 1
 
+# Install Wine
+sudo dpkg --add-architecture i386 
+sleep 1
+sudo apt update
+sleep 1
+sudo apt install software-properties-common wget curl
+sleep 1
+wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+sleep 1
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+sleep 1
+sudo apt update
+sudo apt install --install-recommends winehq-stable
+
+sleep 1
+
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.zshrc ~/.zsh_profile.sav
