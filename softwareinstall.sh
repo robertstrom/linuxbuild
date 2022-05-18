@@ -13,6 +13,9 @@ sudo apt install csvkit -y
 sudo apt install exa -y
 
 # sudo apt install google-chrome-stable -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
 
 # Install Visual Studio Code
 sudo apt update
