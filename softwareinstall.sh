@@ -183,7 +183,12 @@ sudo apt install neofetch -y
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp ~/.zshrc ~/.zshrc.sav
+# Download custom .zshrc file from personal GitHub
 wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_dell_xps_15 -O ~/.zshrc
+
+# Install exa-zsh plugin
+ cd ~/.oh-my-zsh/custom/plugins
+ git clone https://github.com/MohamedElashri/exa-zsh
 
 ## wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
 
