@@ -10,7 +10,15 @@
 # Configure shared folder in VMware to point to the folder on the VMware host and leave shared folders enable
 # Add this line to the /etc/fstab file
 # .host:/    /mnt/hgfs        fuse.vmhgfs-fuse    defaults,allow_other    0    0
-sudo bash -c 'echo ".host:/    /mnt/hgfs        fuse.vmhgfs-fuse    defaults,allow_other    0    0" >> /etc/fstab'
+# Check if the system is a virtual machine, if so, add this entry to the /etc/fstab file so that shared folders are always available
+ps_out=`ps -ef | grep vmtoolsd | grep -v 'grep' | grep -v $0`
+result=$(echo $ps_out | grep "$1")
+if [[ "$result" != "" ]];then
+    sudo bash -c 'echo ".host:/    /mnt/hgfs        fuse.vmhgfs-fuse    defaults,allow_other    0    0" >> /etc/fstab'
+else
+    echo "Not Running"
+fi
+
 
 # Add repositories
 # Shutter
