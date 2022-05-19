@@ -55,7 +55,7 @@ curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/lates
 | wget -qi - -O ~/AppImages/ObsidianAppImage
 chmod +x ~/AppImages/ObsidianAppImage
 # Download the .desktop file
-# wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desktop -O ~/.local/share/applications/obsidian.desktop
+wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desktop -O ~/.local/share/applications/obsidian.desktop
 ## ~/AppImages/ObsidianAppImage --appimage-mount
 # usr/share/icons/hicolor/512x512/apps/obsidian.png
 obsidianpng=$(~/AppImages/ObsidianAppImage --appimage-offset)
