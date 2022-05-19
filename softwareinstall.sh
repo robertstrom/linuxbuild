@@ -23,6 +23,8 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microso
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 
+sudo sed -i 's/jammy/focal/' /etc/apt/sources.list.d/shutter-ubuntu-ppa-jammy.list
+
 sudo apt update && sudo apt upgrade -y
 # sudo apt autoremove --purge
 
