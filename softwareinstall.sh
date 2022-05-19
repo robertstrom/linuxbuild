@@ -5,7 +5,7 @@
 
 # Add repositories
 # Shutter
-# sudo add-apt-repository -y ppa:shutter/ppa
+sudo add-apt-repository -y ppa:shutter/ppa
 # Install Typora
 # https://support.typora.io/Typora-on-Linux/
 # or use
@@ -66,7 +66,7 @@ sudo umount /mnt
 
 sudo apt install -yy gpg gnupg2 gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
 software-properties-common apt-transport-https kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord  vlc vim \
-rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser\
+rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser \
 typora ffmpeg obs-studio code zsh thefuck
  
 sudo systemctl enable ssh
