@@ -64,10 +64,10 @@ cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/AppImages/
 sudo umount /mnt
 
 
-sudo apt install -yy gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
-kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord slack-desktop vlc vim rhythmbox p7zip-rar p7zip-full uget calibre \
-keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser typora ffmpeg obs-studio curl gpg gnupg2 \
-software-properties-common apt-transport-https code zsh
+sudo apt install -yy gpg gnupg2 gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
+software-properties-common apt-transport-https kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord  vlc vim \
+rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser\
+typora ffmpeg obs-studio code zsh
  
 sudo systemctl enable ssh
 
