@@ -5,7 +5,7 @@
 
 # Add repositories
 # Shutter
-sudo add-apt-repository -y ppa:shutter/ppa
+# sudo add-apt-repository -y ppa:shutter/ppa
 # Install Typora
 # https://support.typora.io/Typora-on-Linux/
 # or use
