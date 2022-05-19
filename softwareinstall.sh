@@ -44,6 +44,9 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_insta
 
 sleep 2
 
+# AppImage update program
+# https://github.com/AppImage/AppImageUpdate
+
 # Install Obsidian
 # Download the latest AppImage
 # One Liner to Download the Latest Release from Github Repo.md
