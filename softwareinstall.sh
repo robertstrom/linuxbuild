@@ -308,6 +308,7 @@ wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_del
  git clone https://github.com/MohamedElashri/exa-zsh
  cd -
 
+sudo apt autoremove --purge
 
-wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
+# wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
