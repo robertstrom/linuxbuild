@@ -10,7 +10,7 @@ sudo apt install copyq -y
 
 sleep 1
 
-sudo apt install csvkit -y
+sudo apt install csvkit csvkit-doc -y
 
 sleep 1
 
@@ -35,10 +35,12 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm -rf google-chrome-stable_current_amd64.deb
 
-sleep 1
+sleep 3
+
+sudo dpkg --configure -a
 
 # Install Visual Studio Code
-sudo apt update
+# sudo apt update
 sudo apt install curl gpg gnupg2 software-properties-common apt-transport-https 
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -280,20 +282,20 @@ sudo apt install neofetch -y
 sleep 1
 
 # Install Wine
-sudo dpkg --add-architecture i386 
-sleep 1
-sudo apt update
-sleep 1
-sudo apt install software-properties-common wget curl
-sleep 1
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
-sleep 1
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main'
-sleep 1
-sudo apt update
-sudo apt install --install-recommends winehq-stable
+# sudo dpkg --add-architecture i386 
+# sleep 1
+# sudo apt update
+# sleep 1
+# sudo apt install software-properties-common wget curl
+# sleep 1
+# wget -nc https://dl.winehq.org/wine-builds/winehq.key
+# sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
+# sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+# sleep 1
+# sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main'
+# sleep 1
+# sudo apt update
+# sudo apt install --install-recommends winehq-stable
 
 sleep 1
 
