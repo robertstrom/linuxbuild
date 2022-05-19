@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#Command to execute this script from a terminal
+# Command to execute this script from a terminal
 # wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
 # Add repositories
