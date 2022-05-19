@@ -37,6 +37,7 @@ sudo usermod -a -G fuse rstrom
 mkdir ~/AppImages
 # Create directory for sshfs mount for QNAP NAS
 mkdir -p ~/QNAPMyDocs
+sudo chown rstrom:rstrom ~/QNAPMyDocs
 # Create a directory for mounting remote SMB shares
 mkdir ~/SMBmount
 
