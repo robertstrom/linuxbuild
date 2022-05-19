@@ -75,10 +75,15 @@ sudo apt install -yy gpg gnupg2 gparted htop copyq csvkit exa squashfuse cherryt
 software-properties-common apt-transport-https kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord  vlc vim \
 rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser \
 typora ffmpeg obs-studio code zsh thefuck libimage-exiftool-perl
- 
+
+# SSH Install
 sudo systemctl enable ssh
+# Generate ssh keys automatically
+ssh-keygen -q -t rsa -N '' <<< $'\ny' >/dev/null 2>&1
 
 export qnap='192.168.0.99'
+
+ssh-copy-id rstrom@qnap
 
 sshfs rstrom@$qnap: ~/QNAPMyDocs
 
