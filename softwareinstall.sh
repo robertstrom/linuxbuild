@@ -133,7 +133,7 @@ cd -
  
 # Change shell to zsh
 # sudo chsh -s /usr/bin/zsh
-sudo chsh -s $(which zsh)
+sudo usermod --shell /usr/bin/zsh rstrom
 
 sudo dpkg --configure -a
 
