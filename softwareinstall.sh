@@ -133,7 +133,7 @@ cd -
  
 # Change shell to zsh
 # sudo chsh -s /usr/bin/zsh
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 
 sudo dpkg --configure -a
 
