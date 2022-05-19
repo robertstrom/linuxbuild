@@ -16,41 +16,6 @@ mkdir ~/SMBmount
 
 flatpak uninstall com.giuspen.cherrytree -y
 
-sudo apt install -yy gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
-kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord slack-desktop vlc vim rhythmbox p7zip-rar p7zip-full uget calibre \
-keepassxc screen pdftk pandoc peek neofetch python3-pip
-
-export qnap='192.168.0.99'
-
-sshfs rstrom@$qnap: ~/QNAPMyDocs
-
-pushd '/home/rstrom/QNAPMyDocs/My Documents/IRTools/Nmap/v7.92/'
-
-cp ncat_7.92-2_amd64.deb ~/Downloads/
-cp nmap_7.92-2_amd64.deb ~/Downloads/
-cp nping_0.7.92-2_amd64.deb ~/Downloads/
-cp zenmap_7.92-2_all.deb ~/Downloads/
-
-popd
-
-# Install Nmap
-# Get this from the QNAP NAS
-
-sudo dpkg -i ~/Downloads/ncat_7.92-2_amd64.deb
-sudo dpkg -i ~/Downloads/nmap_7.92-2_amd64.deb
-sudo dpkg -i ~/Downloads/nping_0.7.92-2_amd64.deb
-sudo dpkg -i ~/Downloads/zenmap_7.92-2_all.deb
-
-## Updog web server
-## https://github.com/sc0tfree/updog
-pip3 install updog
-
-# Install OBS
-sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt update
-sudo apt install ffmpeg obs-studio
-
-sleep 3
 
 # Install Joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
@@ -104,6 +69,45 @@ sudo add-apt-repository 'deb https://typora.io/linux ./'
 sudo apt-get update
 # install typora
 sudo apt-get install typora -y
+
+sleep 3
+
+sudo apt install -yy gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
+kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord slack-desktop vlc vim rhythmbox p7zip-rar p7zip-full uget calibre \
+keepassxc screen pdftk pandoc peek neofetch python3-pip
+
+export qnap='192.168.0.99'
+
+sshfs rstrom@$qnap: ~/QNAPMyDocs
+
+pushd '/home/rstrom/QNAPMyDocs/My Documents/IRTools/Nmap/v7.92/'
+
+cp ncat_7.92-2_amd64.deb ~/Downloads/
+cp nmap_7.92-2_amd64.deb ~/Downloads/
+cp nping_0.7.92-2_amd64.deb ~/Downloads/
+cp zenmap_7.92-2_all.deb ~/Downloads/
+
+popd
+
+# Install Nmap
+# Get this from the QNAP NAS
+
+sudo dpkg -i ~/Downloads/ncat_7.92-2_amd64.deb
+sudo dpkg -i ~/Downloads/nmap_7.92-2_amd64.deb
+sudo dpkg -i ~/Downloads/nping_0.7.92-2_amd64.deb
+sudo dpkg -i ~/Downloads/zenmap_7.92-2_all.deb
+
+## Updog web server
+## https://github.com/sc0tfree/updog
+pip3 install updog
+
+# Install OBS
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install ffmpeg obs-studio
+
+sleep 3
+
 
 # Install Wine
 # sudo dpkg --add-architecture i386 
