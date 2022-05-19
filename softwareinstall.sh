@@ -3,61 +3,22 @@
 #Command to execute this script from a terminal
 # wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
-# create ~/AppImages directory
-mkdir ~/AppImages
-
-sudo apt install copyq -y
-
-sleep 1
-
-sudo apt install csvkit csvkit-doc -y
-
-sleep 1
-
-sudo apt install exa -y
-
-sleep 1
-
-sudo apt install squashfuse -y
-
-sleep 1
-
-flatpak uninstall com.giuspen.cherrytree -y
-
-sleep 1
-
-sudo apt install cherrytree -y
-
-
-
-sleep 1
-
-## Install progress viewer
-sudo apt install pv -y
-
-sleep 1
-
-# Install Geany IDE / Editor
-sudo apt install geany -y
-
-sleep 1
-
-# Install Terminator
-sudo apt install terminator -y
-
-sleep 1
-
 # Setup fuse group and add user to fuse group for sshfs use
 sudo groupadd fuse
 sudo usermod -a -G fuse rstrom
 
-# Install sshfs
-sudo apt install sshfs -y
-
-sleep 1
-
+# create ~/AppImages directory
+mkdir ~/AppImages
 # Create directory for sshfs mount for QNAP NAS
 mkdir -p ~/QNAPMyDocs
+# Create a directory for mounting remote SMB shares
+mkdir ~/SMBmount
+
+flatpak uninstall com.giuspen.cherrytree -y
+
+sudo apt install -yy gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
+kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord slack vlc vim rhythmbox p7zip-rar p7zip-full uget calibre \
+keepassxc screen pdftk pandoc peek neofetch
 
 export qnap='192.168.0.99'
 
@@ -80,89 +41,14 @@ sudo dpkg -i ~/Downloads/nmap_7.92-2_amd64.deb
 sudo dpkg -i ~/Downloads/nping_0.7.92-2_amd64.deb
 sudo dpkg -i ~/Downloads/zenmap_7.92-2_all.deb
 
-sleep 1
-
-# Create a directory for mounting remote SMB shares
-mkdir ~/SMBmount
-
-sudo apt install krusader -y
-sudo apt install kdiff3 -y
-sudo apt install krename -y
-sudo apt install kompare -y
-sudo apt install xxdiff -y
-sudo apt install krename -y
-
-sleep 1
-
-## Install Dolphin
-sudo apt install dolphin -y
-
-sleep 1
-
-## Install Spectacle screenshot utility
-sudo apt install kde-spectacle -y
-
-sleep 1
-
-## Install Flameshot
-sudo apt install flameshot -y
-
-sleep 1
-
 ## Updog web server
 ## https://github.com/sc0tfree/updog
 pip3 install updog
-
-sleep 1
-
-# Install Remmina
-sudo apt install remmina -y
-
-sleep 1
-
-# Install Discord
-sudo apt install discord -y
-
-sleep 1
-
-# Install Slack
-sudo apt install slack -y
-
-sleep 1
-
-# Install VLC
-sudo apt install vlc -y
-
-sleep 1
-
-# Install VIM
-sudo apt install vim -y
-
-sleep 1
-
-# Install Rhythmbox
-sudo apt install rhythmbox -y
-
-sleep 1
 
 # Install OBS
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install ffmpeg obs-studio
-
-sleep 1
-
-# Install 7zip
-sudo add-apt-repository universe
-sudo apt update
-sudo apt install p7zip-full p7zip-rar -y
-
-sleep 1
-
-# Install htop
-sudo apt install htop -y
-
-sleep 1
 
 # Install Joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
@@ -186,12 +72,6 @@ sudo mount ~/AppImages/ObsidianAppImage  -o offset=188392 /mnt
 cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/AppImages/
 sudo umount /mnt
 
-sleep 1
-
-# Install uGet
-sudo apt install uget -y
-
-sleep 1
 
 # Install shutter
 sudo add-apt-repository -y ppa:shutter/ppa
@@ -219,49 +99,6 @@ sudo add-apt-repository 'deb https://typora.io/linux ./'
 sudo apt-get update
 # install typora
 sudo apt-get install typora -y
-
-sleep 1
-
-# Install Calibre
-sudo apt install calibre -y
-
-sleep 1
-
-# Install gparted
-sudo apt install gparted -y
-
-sleep 1
-
-#Install KeePassXC
-sudo apt install keepassxc -y
-
-sleep 1
-
-# Install screen
-sudo apt install screen -y
-
-sleep 1
-
-# Install pdftk
-sudo apt install pdftk -y
-
-sleep 1
-
-# Install pandoc
-sudo apt install pandoc -y
-
-sleep 1
-
-# Install peek
-# Simple animated GIF screen recorder with GUI
-sudo apt install peek -y
-
-sleep 1
-
-# Install neofetch
-sudo apt install neofetch -y
-
-sleep 1
 
 # Install Wine
 # sudo dpkg --add-architecture i386 
@@ -314,5 +151,4 @@ sleep 1
 
 sudo apt autoremove --purge
 
-# wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
