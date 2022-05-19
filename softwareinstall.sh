@@ -3,6 +3,8 @@
 #Command to execute this script from a terminal
 # wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
+sudo apt update && sudo apt upgrade -y
+
 # Setup fuse group and add user to fuse group for sshfs use
 sudo groupadd fuse
 sudo usermod -a -G fuse rstrom
