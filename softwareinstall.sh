@@ -124,13 +124,13 @@ mv ~/.zshrc ~/.zsh_profile.sav
 wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_dell_xps_15 -O ~/.zshrc
 
 # Install exa-zsh plugin
- cd ~/.oh-my-zsh/custom/plugins
- git clone https://github.com/MohamedElashri/exa-zsh
- cd -
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/MohamedElashri/exa-zsh
+cd -
  
- # Change shell to zsh
- chsh -s /bin/zsh
- 
+# Change shell to zsh
+# sudo chsh -s /usr/bin/zsh
+chsh -s $(which zsh)
 
 sudo dpkg --configure -a
 
