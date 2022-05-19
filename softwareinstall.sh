@@ -44,7 +44,7 @@ sudo mount ~/AppImages/ObsidianAppImage  -o offset=188392 /mnt
 cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/AppImages/
 sudo umount /mnt
 
-sleep 2
+sleep 5
 
 # Install shutter
 sudo add-apt-repository -y ppa:shutter/ppa
@@ -54,7 +54,7 @@ sudo apt install shutter -y
 sleep 2
 
 # Install Brave Browser
-sudo apt install apt-transport-https curl
+sudo apt install -y apt-transport-https curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
@@ -77,7 +77,9 @@ sleep 3
 
 sudo apt install -yy gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
 kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord slack-desktop vlc vim rhythmbox p7zip-rar p7zip-full uget calibre \
-keepassxc screen pdftk pandoc peek neofetch python3-pip
+keepassxc screen pdftk pandoc peek neofetch python3-pip ssh
+
+sudo systemctl enable ssh
 
 export qnap='192.168.0.99'
 
