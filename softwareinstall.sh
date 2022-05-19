@@ -17,8 +17,8 @@ mkdir ~/SMBmount
 flatpak uninstall com.giuspen.cherrytree -y
 
 sudo apt install -yy gparted htop copyq csvkit exa squashfuse cherrytree pv geany terminator sshfs krusader kdiff3 krename \
-kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord slack vlc vim rhythmbox p7zip-rar p7zip-full uget calibre \
-keepassxc screen pdftk pandoc peek neofetch
+kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord slack-desktop vlc vim rhythmbox p7zip-rar p7zip-full uget calibre \
+keepassxc screen pdftk pandoc peek neofetch python3-pip
 
 export qnap='192.168.0.99'
 
@@ -50,8 +50,12 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install ffmpeg obs-studio
 
+sleep 3
+
 # Install Joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
+
+sleep 2
 
 # Install Obsidian
 # Download the latest AppImage
@@ -72,13 +76,14 @@ sudo mount ~/AppImages/ObsidianAppImage  -o offset=188392 /mnt
 cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/AppImages/
 sudo umount /mnt
 
+sleep 2
 
 # Install shutter
 sudo add-apt-repository -y ppa:shutter/ppa
 sudo apt update
 sudo apt install shutter -y
 
-sleep 1
+sleep 2
 
 # Install Brave Browser
 sudo apt install apt-transport-https curl
@@ -87,7 +92,7 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo apt update
 sudo apt install brave-browser -y
 
-sleep 1
+sleep 2
 
 # Install Typora
 # https://support.typora.io/Typora-on-Linux/
