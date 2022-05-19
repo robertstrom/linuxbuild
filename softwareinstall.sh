@@ -4,7 +4,7 @@
 # wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
 sudo apt update && sudo apt upgrade -y
-sudo apt autoremove --purge
+# sudo apt autoremove --purge
 
 # Setup fuse group and add user to fuse group for sshfs use
 sudo groupadd fuse
