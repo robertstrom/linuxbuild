@@ -28,25 +28,7 @@ sleep 1
 
 sudo apt install cherrytree -y
 
-sleep 1
 
-# sudo apt install google-chrome-stable -y
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-rm -rf google-chrome-stable_current_amd64.deb
-
-sleep 3
-
-sudo dpkg --configure -a
-
-# Install Visual Studio Code
-# sudo apt update
-sudo apt install curl gpg gnupg2 software-properties-common apt-transport-https 
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
-sudo apt update
-sudo apt install code -y
 
 sleep 1
 
@@ -309,6 +291,26 @@ wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_del
  cd ~/.oh-my-zsh/custom/plugins
  git clone https://github.com/MohamedElashri/exa-zsh
  cd -
+ 
+ sleep 1
+
+sudo dpkg --configure -a
+
+# Install Visual Studio Code
+# sudo apt update
+sudo apt install curl gpg gnupg2 software-properties-common apt-transport-https 
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+sudo apt update
+sudo apt install code -y
+
+# sudo apt install google-chrome-stable -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
+
+sleep 1
 
 sudo apt autoremove --purge
 
