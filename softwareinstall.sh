@@ -309,5 +309,5 @@ wget https://raw.githubusercontent.com/robertstrom/oh-my-zsh/main/zshrc-file_del
  cd -
 
 
-wget -O - https://raw.githubusercontent.com/robertstrom/kali-setup/main/kali-programs-to-install.sh | bash
+wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
