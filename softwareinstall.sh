@@ -3,6 +3,8 @@
 # Command to execute this script from a terminal
 # wget -O - https://raw.githubusercontent.com/robertstrom/linuxbuild/main/softwareinstall.sh | bash
 
+scriptstarttime=$(date)
+
 # For a VM install - setup shared folder
 # See these articles
 # https://kb.vmware.com/s/article/60262
@@ -178,3 +180,11 @@ sudo apt update && sudo apt upgrade -y
 sudo apt autoremove --purge
 
 
+scriptendtime=$(date)
+echo " "
+echo "The script started at $scriptstarttime"
+echo " "
+echo "The script completed at $scriptendtime"
+echo " "
+echo "The installation and configuration of this new Ubuntu build has completed"
+echo "Happy Hacking!"
