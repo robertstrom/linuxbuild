@@ -21,6 +21,10 @@ else
     echo "Not Running"
 fi
 
+# Turn off LLMNR
+activenic=$(nmcli device status | grep -E '\bconnected\b' | awk '{ print $1 }')
+sudo resolvectl llmnr $activenic off
+sudo sed -i 's/#LLMNR=no/LLMNR=no/' /etc/systemd/resolved.conf
 
 # Add repositories
 # Shutter
@@ -101,7 +105,7 @@ sudo apt install -yy gpg gnupg2 gparted htop copyq csvkit exa squashfuse cherryt
 software-properties-common apt-transport-https kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord  vlc vim \
 rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser \
 typora ffmpeg obs-studio code zsh thefuck libimage-exiftool-perl catfish doublecmd-common doublecmd-plugins cmatrix okular \
-archivemount safecopy dcfldd dc3dd xclip sipcalc breeze-icon-theme deja-dup smbclient cifs-utils
+archivemount safecopy dcfldd dc3dd xclip sipcalc breeze-icon-theme deja-dup smbclient cifs-utils gnome-tweaks
 
 # SSH Install
 sudo systemctl enable ssh
@@ -179,6 +183,21 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt autoremove --purge
 
+# Gnome settings
+# https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/using_the_desktop_environment_in_rhel_8/configuring-gnome-at-low-level_using-the-desktop-environment-in-rhel-8
+# https://askubuntu.com/questions/971067/how-can-i-script-the-settings-made-by-gnome-tweak-tool
+# Use the command below to monitor changes made in order to know what settings you need to change
+# dconf watch /
+
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:' 
+
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
+
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 35
+
+gsettings set org.gnome.shell favorite-apps "['pop-cosmic-launcher.desktop', 'pop-cosmic-workspaces.desktop', 'pop-cosmic-applications.desktop', 'geany.desktop', 'firefox.desktop', 'brave-browser.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.kde.dolphin.desktop', 'org.kde.krusader.desktop', 'org.gnome.Terminal.desktop', 'terminator.desktop', 'io.elementary.appcenter.desktop', 'gnome-control-center.desktop']"
 
 scriptendtime=$(date)
 echo " "
