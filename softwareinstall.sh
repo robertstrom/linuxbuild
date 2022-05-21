@@ -101,7 +101,7 @@ sudo apt install -yy gpg gnupg2 gparted htop copyq csvkit exa squashfuse cherryt
 software-properties-common apt-transport-https kompare xxdiff krename dolphin kde-spectacle flameshot remmina discord  vlc vim \
 rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser \
 typora ffmpeg obs-studio code zsh thefuck libimage-exiftool-perl catfish doublecmd-common doublecmd-plugins cmatrix okular \
-archivemount safecopy dcfldd dc3dd xclip sipcalc breeze-icon-theme deja-dup smbclient
+archivemount safecopy dcfldd dc3dd xclip sipcalc breeze-icon-theme deja-dup smbclient cifs-utils
 
 # SSH Install
 sudo systemctl enable ssh
