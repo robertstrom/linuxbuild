@@ -199,6 +199,9 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 35
 
 gsettings set org.gnome.shell favorite-apps "['pop-cosmic-launcher.desktop', 'pop-cosmic-workspaces.desktop', 'pop-cosmic-applications.desktop', 'geany.desktop', 'firefox.desktop', 'brave-browser.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.kde.dolphin.desktop', 'org.kde.krusader.desktop', 'org.gnome.Terminal.desktop', 'terminator.desktop', 'io.elementary.appcenter.desktop', 'gnome-control-center.desktop']"
 
+sudo cp /usr/share/app-install/desktop/dolphin:org.kde.dolphin.desktop /usr/share/app-install/desktop/dolphin:org.kde.dolphin.desktop.sav
+sudo bash -c 'echo "Icon=/home/rstrom/Pictures/dolphin_file_manager.png" >> /usr/share/app-install/desktop/dolphin:org.kde.dolphin.desktop'
+
 scriptendtime=$(date)
 echo " "
 echo "The script started at $scriptstarttime"
