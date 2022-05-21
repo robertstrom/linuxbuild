@@ -58,7 +58,7 @@ mkdir ~/AppImages
 mkdir ~/QNAPMyDocs
 # sudo chown rstrom:rstrom ~/QNAPMyDocs
 # Create a directory for mounting remote SMB shares
-mkdir ~/SMBmount
+mkdir ~/SMBMount
 
 flatpak uninstall com.giuspen.cherrytree -y
 
