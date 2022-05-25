@@ -45,6 +45,11 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+# Download the Microsoft repository GPG keys
+wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+
 
 # 5/18/2022 - Fix Shutter PPA to fall back to the Ubuntu focal PPA since there is no jammy PPA yet
 sudo sed -i 's/jammy/focal/' /etc/apt/sources.list.d/shutter-ubuntu-ppa-jammy.list
@@ -106,7 +111,7 @@ software-properties-common apt-transport-https kompare xxdiff krename dolphin kd
 rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser \
 typora ffmpeg obs-studio code zsh thefuck libimage-exiftool-perl catfish doublecmd-common doublecmd-plugins cmatrix okular \
 archivemount safecopy dcfldd dc3dd xclip sipcalc breeze-icon-theme deja-dup smbclient cifs-utils gnome-tweaks gnome-shell-extensions \
-xsltproc tshark
+xsltproc tshark powershell
 
 # SSH Install
 sudo systemctl enable ssh
