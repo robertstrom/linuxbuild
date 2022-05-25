@@ -208,6 +208,8 @@ gsettings set org.gnome.shell favorite-apps "['pop-cosmic-launcher.desktop', 'po
 sudo cp /usr/share/app-install/desktop/dolphin:org.kde.dolphin.desktop /usr/share/app-install/desktop/dolphin:org.kde.dolphin.desktop.sav
 sudo bash -c 'echo "Icon=/home/rstrom/Pictures/dolphin_file_manager.png" >> /usr/share/app-install/desktop/dolphin:org.kde.dolphin.desktop'
 
+sudo apt install tshark
+
 scriptendtime=$(date)
 echo " "
 echo "The script started at $scriptstarttime"
