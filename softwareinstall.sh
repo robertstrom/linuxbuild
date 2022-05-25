@@ -111,7 +111,7 @@ software-properties-common apt-transport-https kompare xxdiff krename dolphin kd
 rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser \
 typora ffmpeg obs-studio code zsh thefuck libimage-exiftool-perl catfish doublecmd-common doublecmd-plugins cmatrix okular \
 archivemount safecopy dcfldd dc3dd xclip sipcalc breeze-icon-theme deja-dup smbclient cifs-utils gnome-tweaks gnome-shell-extensions \
-xsltproc tshark powershell
+xsltproc powershell
 
 # SSH Install
 sudo systemctl enable ssh
