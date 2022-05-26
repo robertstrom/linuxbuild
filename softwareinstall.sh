@@ -209,7 +209,9 @@ sudo bash -c 'echo "Icon=/home/rstrom/Pictures/dolphin_file_manager.png" >> /usr
 
 # https://unix.stackexchange.com/questions/367866/how-to-choose-a-response-for-interactive-prompt-during-installation-from-a-shell
 echo "wireshark-common wireshark-common/install-setuid boolean true" | sudo debconf-set-selections
-sudo DEBIAN_FRONTEND=noninteractive apt install wireshark
+sudo DEBIAN_FRONTEND=noninteractive apt install wireshark -y
+echo "tshark install-setuid boolean true" | sudo debconf-set-selections
+sudo DEBIAN_FRONTEND=noninteractive apt install tshark -y
 
 sudo apt autoremove --purge
 
