@@ -13,6 +13,7 @@ scriptstarttime=$(date)
 # Add this line to the /etc/fstab file
 # .host:/    /mnt/hgfs        fuse.vmhgfs-fuse    defaults,allow_other    0    0
 # Check if the system is a virtual machine, if so, add this entry to the /etc/fstab file so that shared folders are always available
+# NOTE: The system will fail to boot if the shared folder has not been configured in the virtual machine settings
 ps_out=`ps -ef | grep vmtoolsd | grep -v 'grep' | grep -v $0`
 result=$(echo $ps_out | grep "$1")
 if [[ "$result" != "" ]];then
