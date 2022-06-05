@@ -112,7 +112,7 @@ software-properties-common apt-transport-https kompare xxdiff krename dolphin kd
 rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek neofetch python3-pip ssh shutter brave-browser \
 typora ffmpeg obs-studio code zsh thefuck libimage-exiftool-perl catfish doublecmd-common doublecmd-plugins cmatrix okular \
 xclip sipcalc breeze-icon-theme deja-dup smbclient cifs-utils xsltproc powershell archivemount safecopy dcfldd dc3dd xorriso \
-gnome-tweaks gnome-shell-extensions tesseract-ocr mediainfo mkvtoolnix mkvtoolnix-gui ubuntu-restricted-extras solaar
+gnome-tweaks gnome-shell-extensions tesseract-ocr mediainfo mkvtoolnix mkvtoolnix-gui ubuntu-restricted-extras solaar rename
 
 
 
