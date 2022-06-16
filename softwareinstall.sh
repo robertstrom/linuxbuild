@@ -198,7 +198,7 @@ sudo apt update && sudo apt upgrade -y
 # Use the command below to monitor changes made in order to know what settings you need to change
 # dconf watch /
 
-gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:' 
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:' 
 
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
 
