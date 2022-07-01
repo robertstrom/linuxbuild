@@ -154,7 +154,7 @@ pushd /opt
 sudo git clone https://github.com/mrschyte/nmap-converter.git
 sudo pip install python-libnmap
 sudo pip install XlsxWriter
-sudo chown -R ./nmap-converter
+sudo chown rstrom -R ./nmap-converter
 pythonvar=$(which python3)
 sed -i "s|/usr\/bin/env python|$pythonvar|" nmap-converter.py
 unset pythonvar
