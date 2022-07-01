@@ -162,6 +162,7 @@ cd /usr/bin
 sudo ln -s /opt/nmap-converter/nmap-converter.py nmap-converter 
 sudo chown -R rstrom nmap-converter
 popd
+popd
 
 
 # Install Wine
