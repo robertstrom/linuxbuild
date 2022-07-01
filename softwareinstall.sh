@@ -156,7 +156,7 @@ sudo pip install python-libnmap
 sudo pip install XlsxWriter
 sudo chown rstrom -R ./nmap-converter
 pythonvar=$(which python3)
-sed -i "s|/usr\/bin/env python|$pythonvar|" nmap-converter.py
+sed -i "s|/usr\/bin/env python|$pythonvar|" ./nmap-converter/nmap-converter.py
 unset pythonvar
 cd /usr/bin
 sudo ln -s /opt/nmap-converter/nmap-converter.py nmap-converter 
