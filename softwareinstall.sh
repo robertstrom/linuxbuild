@@ -149,6 +149,21 @@ sudo dpkg -i ~/Downloads/zenmap_7.92-2_all.deb
 ## https://github.com/sc0tfree/updog
 pip3 install updog
 
+# Install nmap-converter
+pushd /opt
+sudo git clone https://github.com/mrschyte/nmap-converter.git
+sudo pip install python-libnmap
+sudo pip install XlsxWriter
+sudo chown -R ./nmap-converter
+pythonvar=$(which python3)
+sed -i "s|/usr\/bin/env python|$pythonvar|" nmap-converter.py
+unset pythonvar
+cd /usr/bin
+sudo ln -s /opt/nmap-converter/nmap-converter.py nmap-converter 
+sudo chown -R rstrom nmap-converter
+popd
+
+
 # Install Wine
 # sudo dpkg --add-architecture i386 
 # sleep 1
