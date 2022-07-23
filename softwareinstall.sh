@@ -113,7 +113,7 @@ rhythmbox p7zip-rar p7zip-full uget calibre keepassxc screen pdftk pandoc peek n
 typora ffmpeg obs-studio code zsh thefuck libimage-exiftool-perl catfish doublecmd-common doublecmd-plugins cmatrix okular \
 xclip sipcalc breeze-icon-theme deja-dup smbclient cifs-utils xsltproc powershell archivemount safecopy dcfldd dc3dd xorriso \
 gnome-tweaks gnome-shell-extensions tesseract-ocr mediainfo mkvtoolnix mkvtoolnix-gui ubuntu-restricted-extras solaar rename datamash \
-rlwrap partitionmanager pigz ncdu mc whois dconf-editor grepcidr speedtest-cli neofetch tmux mpack fonts-powerline
+rlwrap partitionmanager pigz ncdu mc whois dconf-editor grepcidr speedtest-cli neofetch tmux mpack fonts-powerline font-manager
 
 
 
@@ -204,6 +204,11 @@ sudo dpkg --configure -a
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm -rf google-chrome-stable_current_amd64.deb
+
+# Install glow terminal markdown reader
+wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_amd64.deb
+sudo dpkg -i glow_1.4.1_linux_amd64.deb
+rm -rf glow_1.4.1_linux_amd64.deb
 
 sudo apt update && sudo apt upgrade -y
 
