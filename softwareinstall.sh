@@ -116,7 +116,8 @@ gnome-tweaks gnome-shell-extensions tesseract-ocr mediainfo mkvtoolnix mkvtoolni
 rlwrap partitionmanager pigz ncdu mc whois dconf-editor grepcidr speedtest-cli neofetch tmux mpack fonts-powerline font-manager lolcat \
 fzf ripgrep bat
 
-
+# Setting up link to bat for the batcat install
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
 # SSH Install
 sudo systemctl enable ssh
