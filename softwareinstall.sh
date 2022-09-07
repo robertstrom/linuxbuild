@@ -240,6 +240,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt install wireshark -y
 echo "tshark install-setuid boolean true" | sudo debconf-set-selections
 sudo DEBIAN_FRONTEND=noninteractive apt install tshark -y
 
+# Download and install 7zip 22.01
+pushd ~/Downloads
+wget https://www.7-zip.org/a/7z2201-linux-x64.tar.xz
+tar -xvf 7z2201-linux-x64.tar.xz 7zzs
+tar -xvf 7z2201-linux-x64.tar.xz 7zz
+sudo mv 7zz* /usr/bin/
+popd
+
 sudo apt autoremove --purge
 
 scriptendtime=$(date)
