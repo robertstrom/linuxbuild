@@ -96,7 +96,9 @@ wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desk
 # usr/share/icons/hicolor/512x512/apps/obsidian.png
 obsidianpng=$(~/AppImages/ObsidianAppImage --appimage-offset)
 sudo mount ~/AppImages/ObsidianAppImage  -o offset=188392 /mnt
-cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/AppImages/
+## cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/AppImages/
+mkdir ~/.icons
+cp /mnt/usr/share/icons/hicolor/512x512/apps/obsidian.png ~/.icons
 sudo umount /mnt
 
 # Peazip Install
