@@ -90,6 +90,8 @@ curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/lates
 | tr -d \" \
 | wget -qi - -O ~/AppImages/ObsidianAppImage
 chmod +x ~/AppImages/ObsidianAppImage
+# Create directory that might not exist yet. This directory needs to exist for the obsidian.desktop file
+mkdir -p ~/.local/share/applications/
 # Download the .desktop file
 wget https://raw.githubusercontent.com/robertstrom/linuxbuild/main/obsidian.desktop -O ~/.local/share/applications/obsidian.desktop
 ## ~/AppImages/ObsidianAppImage --appimage-mount
