@@ -84,11 +84,7 @@ sleep 2
 # Download the latest AppImage
 # One Liner to Download the Latest Release from Github Repo.md
 # https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
-curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | grep -i appimage | grep -v arm \
-| grep browser_download \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi - -O ~/AppImages/ObsidianAppImage
+curl -s https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest | grep -i appimage | grep -v arm | grep browser_download | cut -d : -f 2,3 | tr -d \" | wget -qi - -O ~/AppImages/ObsidianAppImage
 chmod +x ~/AppImages/ObsidianAppImage
 # Create directory that might not exist yet. This directory needs to exist for the obsidian.desktop file
 mkdir -p ~/.local/share/applications/
